@@ -64,9 +64,11 @@ footer p { font-size: 0.65rem; letter-spacing: 0.35em; text-transform: uppercase
 .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 @media (max-width: 768px) { nav { padding: 1rem 1.5rem; } nav.scrolled { padding: 0.7rem 1.5rem; } .nav-toggle { display: flex; } .nav-links { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; height: 100vh; background: #000; flex-direction: column; align-items: center; justify-content: center; gap: 2rem; z-index: 200; } .nav-links.is-open { display: flex; } .nav-links a { font-size: 0.7rem; letter-spacing: 0.4em; } .page-header { padding: 8rem 1.5rem 3rem; } .page-content { padding: 3rem 1.5rem 6rem; } .founders-layout { grid-template-columns: 1fr; gap: 2rem; } .event-card { grid-template-columns: 1fr; gap: 1.5rem; } footer { padding: 2rem 1.5rem; } }
 @media (max-width: 480px) { .page-header h1 { font-size: 1.6rem; } }
-.coming-soon-wrap { min-height: calc(100vh - 160px); display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 1.4rem; text-align: center; padding: 6rem 3rem; }
-.coming-soon-label { font-family: 'Messapia','Helvetica Neue',sans-serif; font-size: 0.5rem; letter-spacing: 0.6em; text-transform: uppercase; color: var(--accent-dark); font-weight: 700; }
-.coming-soon-title { font-family: 'Messapia','Helvetica Neue',sans-serif; font-size: clamp(1.2rem,3vw,2rem); letter-spacing: 0.4em; text-transform: uppercase; color: var(--text); font-weight: 700; }
+.news-card { display: block; border-top: 1px solid var(--border); padding-top: 3rem; text-decoration: none; color: inherit; transition: opacity 0.3s; }
+.news-card:hover { opacity: 0.7; }
+.news-meta { display: block; font-family: 'Messapia','Helvetica Neue',sans-serif; font-size: 0.55rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--accent-dark); font-weight: 700; margin-bottom: 1.2rem; }
+.news-title { font-size: clamp(1.3rem,3vw,1.9rem); font-weight: 700; line-height: 1.35; color: var(--text); margin-bottom: 1.4rem; max-width: 700px; }
+.news-link { display: inline-block; font-family: 'Messapia','Helvetica Neue',sans-serif; font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--accent); font-weight: 700; }
 </style>
 </head>
 <body>
@@ -86,9 +88,16 @@ footer p { font-size: 0.65rem; letter-spacing: 0.35em; text-transform: uppercase
     <li><a href="solymar-records.html#contact">Contact</a></li>
   </ul>
 </nav>
-<div class="coming-soon-wrap">
-  <span class="coming-soon-label">News</span>
-  <p class="coming-soon-title">Coming Soon</p>
+<div class="page-header">
+  <span class="page-label">Solymar Records</span>
+  <h1>News</h1>
+</div>
+<div class="page-content">
+  <a class="news-card" href="https://voyagela.com/interview/daily-inspiration-meet-solymar-records/" target="_blank" rel="noopener">
+    <span class="news-meta">Voyage LA &mdash; Interview</span>
+    <h2 class="news-title">Daily Inspiration: Meet Solymar Records</h2>
+    <span class="news-link">Read the Interview &rarr;</span>
+  </a>
 </div>
 <footer>
   <div class="social-links">
